@@ -137,8 +137,21 @@
                     // Crear el enlace para abrir Gmail
                     const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=helpdesk@blackwell.university&su=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpoCorreo)}`;
 
-                    // Abrir Gmail automáticamente
-                    window.open(gmailLink, '_blank');
+                    // Detectar si es un dispositivo móvil
+                    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+                    if (isMobile) {
+                        // Intentar abrir la aplicación de Gmail en dispositivos móviles
+                        window.location.href = `googlegmail://co?to=helpdesk@blackwell.university&subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpoCorreo)}`;
+
+                        // Si la aplicación no está instalada, abrir el enlace web después de 2 segundos
+                        setTimeout(() => {
+                            window.location.href = gmailLink;
+                        }, 2000);
+                    } else {
+                        // Abrir Gmail en el navegador para PC
+                        window.open(gmailLink, '_blank');
+                    }
                 }
             });
         }
