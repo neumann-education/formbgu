@@ -20,28 +20,29 @@
         }
         .form-container {
             background: #fff;
-            padding: 40px;
+            padding: 20px; /* Reducido para dispositivos móviles */
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            width: 500px;
+            width: 90%; /* Ancho responsivo */
+            max-width: 500px; /* Límite máximo para PC */
             border: 1px solid #ddd;
         }
         .form-container h1 {
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 24px;
+            margin-bottom: 20px; /* Reducido para dispositivos móviles */
+            font-size: 20px; /* Tamaño de fuente más pequeño */
             color: #444;
         }
         .form-container label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px; /* Reducido para dispositivos móviles */
             font-weight: bold;
             color: #555;
         }
         .form-container input, .form-container select, .form-container textarea {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 25px;
+            padding: 10px; /* Reducido para dispositivos móviles */
+            margin-bottom: 15px; /* Reducido para dispositivos móviles */
             border: 1px solid #ccc;
             border-radius: 5px;
             background: #f9f9f9;
@@ -55,7 +56,7 @@
             background: #007BFF;
             color: #fff;
             border: none;
-            padding: 14px 20px;
+            padding: 12px 20px; /* Reducido para dispositivos móviles */
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
@@ -70,6 +71,22 @@
             appearance: none;
             background: #f9f9f9 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
             background-size: 12px;
+        }
+        /* Media query para dispositivos móviles */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 15px; /* Ajuste adicional para móviles */
+            }
+            .form-container h1 {
+                font-size: 18px; /* Tamaño de fuente aún más pequeño */
+            }
+            .form-container input, .form-container select, .form-container textarea {
+                padding: 8px; /* Ajuste adicional para móviles */
+                margin-bottom: 10px; /* Ajuste adicional para móviles */
+            }
+            .form-container button {
+                padding: 10px 15px; /* Ajuste adicional para móviles */
+            }
         }
     </style>
 </head>
