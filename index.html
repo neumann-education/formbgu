@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Consulta</title>
     <link rel="icon" type="image/png" href="https://cdn.bitrix24.es/b15495391/landing/e79/e79fb239ff37e96e3340ef1ed8782f6c/Logotipo-Blackwell_1x.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- Enlace a Google Fonts para usar Montserrat y Source Serif Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+
     <!-- SweetAlert CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Source Serif Pro', serif; /* Fuente Source Serif Pro */
+          background-image: url('https://campus.blackwell.university/pluginfile.php/1/theme_alpha/loginbg/1731598420/portada-campus-virtual.jpg'); /* Reemplaza con tu imagen */
+          background-size: cover;
+          background-repeat: no-repeat; /* Evita que la imagen se duplique */
+          background-position: center;
+          height: 100vh;
+          margin: 0;
+          overflow: hidden;
+          background-attachment: fixed; /* Fija la imagen de fondo */
         }
         .form-container {
             background: #fff;
             padding: 20px; /* Reducido para dispositivos móviles */
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             width: 90%; /* Ancho responsivo */
             max-width: 500px; /* Límite máximo para PC */
             border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .form-container h1 {
             text-align: center;
